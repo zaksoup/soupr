@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<% unless current_user.nil? %>
+<div>Signed in as... <%= current_user.email %></div>
+<div>Your ID is <%= current_user.id %></div>
+<% end %>
+<div><%= link_to 'log out', :destroy_user_session, method: :delete %>
 <%= yield %>
 
 </body>
