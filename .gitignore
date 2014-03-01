@@ -15,5 +15,8 @@
 /log/*.log
 /tmp
 
-#Ignore this stupid thing
+# Ignore this stupid thing
 .DS_Store
+
+# Ignore uploads
+/public/uploads/*
